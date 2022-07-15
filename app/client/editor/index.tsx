@@ -1,5 +1,6 @@
-import { basicSetup, EditorView } from "codemirror";
+import { EditorView } from "@codemirror/view";
 import { EditorState, RangeSetBuilder } from "@codemirror/state";
+import { basicSetup } from "./basicSetup";
 import { indentWithTab } from "@codemirror/commands";
 import { haskell } from "@codemirror/legacy-modes/mode/haskell";
 import { StreamLanguage } from "@codemirror/language";
