@@ -1,3 +1,5 @@
+import { render } from "preact";
+
 import { LayoutTransaction, TabState, focusCurrent } from "./state";
 import { LayoutView, TabView } from "./view";
 
@@ -47,7 +49,7 @@ export class TabBar {
       }
     });
 
-    this.newTabButton = new NewTabButton(this.parent) 
+    this.newTabButton = new NewTabButton(this.parent);
     this.dom.appendChild(this.newTabButton.dom);
   }
 
@@ -67,7 +69,7 @@ export class TabBar {
         this.children.set(state.id, tab);
         // TODO: This assumes that all added tabs are added to the end
         // but before the new tab button
-        this.dom.insertBefore(tab.dom, this.newTabButton.dom)
+        this.dom.insertBefore(tab.dom, this.newTabButton.dom);
       }
     }
 
